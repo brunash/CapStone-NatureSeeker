@@ -1,27 +1,39 @@
-@use '../styles/partials/fonts'as *;
-@use '../styles/partials/variables' as *;
-@use '../styles/partials/mixins' as *;
+@use './styles/partials/fonts'as *;
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
 
 * {
     margin: 0;
     padding: 0;
     list-style: none;
+    
 }
 
 html {
     background-color: $main-background;
-    font-size: 3rem;
-    
+    color: $font-color;
+    font-size: 3rem;    
 }
 body {
     font-family: 'cuprum', 'verdana';
     
+    
 }
+.link {
+    color: $font-color;
+    text-decoration: none;
+}
+.link:hover {
+    color: $green-color;
+    transition: 0.3s;
+    
+}
+// .main {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     margin-top: 3rem;
+// }
 
-.main {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
-    // margin-top: 3rem;
-}
+
 

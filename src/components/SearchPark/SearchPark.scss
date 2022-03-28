@@ -1,0 +1,62 @@
+@use '../../styles/partials/variables'as *;
+
+.explore {
+     background-color: $main-background;
+}
+
+// .search {
+    
+// }
+
+
+/*
+=====
+RESET STYLES
+=====
+*/
+.search__input {
+  position: relative;
+  top: -2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--button {
+      background-color: $font-color;
+      color: $main-background;
+      border-radius: 15px;
+      height: 0.8rem;
+      width: 25%;
+      margin-top: 1rem;
+  }
+  &--text{ 
+  background-color: transparentize($color: $main-background, $amount: 0.55);
+  border-radius: 50px;
+  border: none;
+  font-family: inherit;
+  font-size: 0.7rem;
+   text-align: center;
+  border-radius: 25px;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  color: $font-color;
+//   position: relative;
+//   top: -2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+}
+.search__input--text:focus::-webkit-input-placeholder{
+  color: $font-color;
+}
+.search__input--text:focus::-moz-placeholder{
+  color: $font-color;
+}
+
+.search__input--text::placeholder {
+  border-color: $font-color;
+  color: $font-color;
+  font-style: italic;
+}
+.search__input--text:focus{
+  outline: white;
+}
+
