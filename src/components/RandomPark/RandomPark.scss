@@ -1,5 +1,5 @@
 @use '../../styles/partials/variables'as *;
-
+@use '../../styles/partials/mixins'as *;
 .explore {
     background-color: $main-background;
     width: 100%;
@@ -22,6 +22,7 @@
 }
 
 .random {
+    background-color: white;
     width: 8rem;
     height: 20%;
     border-radius: 5px;
@@ -65,4 +66,15 @@
 //         background-color: green;
 //     }
 // }
-
+.random__image:hover {
+    transform: scale(1);
+    @include tablet {
+    // position:relative;
+    transition: 0.5s;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.6);
+    }
+}

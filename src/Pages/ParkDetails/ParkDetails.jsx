@@ -38,40 +38,43 @@ console.log(parkDetails);
   const showParkDetails = () => {
     return (
       <div className="details">
-        <p
+        {/* <p
           className="details__back"
           style={{ marginTop: "63px" }}
           onClick={() => props.history.push("/explore")}
         >
           &#11148; Back
-        </p>
-
+        </p> */}
+        <h2 className="details__info--title">{parkDetails.fullName}</h2>
         <div
           className="details__info"
           // style={{ width: "100%", marginBottom: "60px", marginTop: "45px" }}
         >
-          <h2 className="details__info--title">{parkDetails.fullName}</h2>
           <p className="details__info--address">
             {parkDetails.addresses[0].city},{" "}
             {parkDetails.addresses[0].stateCode}
           </p>
-          <p className="details__info--description">{parkDetails.description}</p>
+          <p className="details__info--description">
+            {parkDetails.description}
+          </p>
         </div>
+        <div className="images__container">
+          {parkDetails?.images.map((eachImage) => {
+            return (
+              <section className="image-wrap">
+                {/* <div
+              className="details__image" */}
+                {/* // style={{ backgroundImage: `url(${eachImage.url})` }} */}
+                {/* > */}
 
-        {parkDetails?.images.map((eachImage) => {
-          return (
-          <section className="image-wrap">
-            <div
-              className="details__image"
-              // style={{ backgroundImage: `url(${eachImage.url})` }}
-            >
-              
-              <img src={eachImage.url} width="150px" className="details__image--photo" />
-              <p className="details__image--caption">{eachImage.caption}</p>
-            </div>
-            </section> 
-          );
-        })}
+                <img src={eachImage.url} className="details__image--photo" />
+
+                {/* </div> */}
+                <p className="details__image--caption">{eachImage.caption}</p>
+              </section>
+            );
+          })}
+        </div>
       </div>
     );
   };

@@ -18,7 +18,9 @@ export default function NavBar() {
           <li className="header__nav--option">Search Trails</li>
           <li className="header__nav--option">Log in</li>
         </ul>
+        
       </header>
+      
     </>
   );
 }

@@ -1,11 +1,13 @@
 @use '../../styles/partials/variables'as *;
 @use '../../styles/partials/mixins'as *;
 .explore {
-     background-color: white;
+    background-color: white;
 }
-
+// .search {
+//     background-color: white;
+// }
 .searched {
-    
+    // background-color: white;
     display: flex;
     align-items: center;
     width: 100%;
@@ -70,6 +72,7 @@
     }
 }
 .search__input {
+  width: 100vw;
   position: relative;
   top: -2rem;
   display: flex;
@@ -80,7 +83,7 @@
     color: $main-background;
     border-radius: 15px;
     height: 0.8rem;
-    width: 25%;
+    width: 5rem;
     margin-top: 1rem;
     }
   &--text{ 
