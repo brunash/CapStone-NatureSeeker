@@ -59,39 +59,81 @@ export default function SearchPark() {
   const showParkResults = () => {
     return (
       <div className="searched" key={allSearchedPark.id}>
-        <div className="searched__info">
-          <h2>{allSearchedPark.fullName}</h2>
-          <div className="searched__location">
-            <h3>Location: </h3>
-            <p>
-              {allSearchedPark.addresses[0].city},{" "}
-              {allSearchedPark.addresses[0].stateCode}
-            </p>
+        <div>
+          <h2 className="searched__title">{allSearchedPark.fullName}</h2>
+          <section className="searched__info">
+            <div className="searched__info--location">
+              <h3>Location: </h3>
+              <p>
+                {allSearchedPark.addresses[0].city},{" "}
+                {allSearchedPark.addresses[0].stateCode}
+              </p>
+            </div>
+            {/* <div className="searched__info--contact">
+              {" "} */}
+              {/* <h3 className="searched__contact--title">Contact Info</h3> */}
+              {/* <p className="searched__contact--email">
+                E-mail:{" "}
+                {allSearchedPark.contacts.emailAddresses[0].emailAddress}
+              </p>
+              <p className="searched__contact--phone">
+                Phone number:{" "}
+                {allSearchedPark.contacts.phoneNumbers[0].phoneNumber}
+              </p> */}
+              {/* <h3 className="searched__contact--hours">Operating Hours</h3> */}
+              
+            {/* </div> */}
+            <div className="searched__info--description">
+              {/* <h3>Description</h3> */}
+              <p>{allSearchedPark.description}</p>
+              <p className="searched__contact--hours-description">
+                {allSearchedPark.operatingHours[0].description}
+              </p>
+              <div className="searched__info--weather">
+                {/* <h3>Weather Info</h3> */}
+                <p>{allSearchedPark.weatherInfo}</p>
+              </div>
+            </div>
+          </section>
+          <div className="searched__gallery">
+            {allSearchedPark.images.map((eachImage) => {
+              console.log(allSearchedPark);
+              return (
+                <div
+                  className="searched__gallery--wrap"
+                  // style={{ backgroundImage: `url(${eachImage.url})` }}
+                >
+                  <img
+                    src={eachImage.url}
+                    // width="300px"
+                    className="searched__gallery--image"
+                  />
+                  <p className="searched__gallery--caption">
+                    {eachImage.caption}
+                  </p>
+                </div>
+              );
+            })}
+            {/* <ImageList variant="quilted" cols={3} gap={8}>
+              {allSearchedPark.images.map((item) => (
+                <ImageListItem key={item.url}>
+                  <img
+                    src={`${item.url}?w=248&fit=crop&auto=format`}
+                    srcSet={`${item.url}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                  <ImageListItemBar
+                    title={item.caption}
+                    // title={item.title}
+                    className="searched__gallery--caption"
+                  />
+                </ImageListItem>
+              ))}
+            </ImageList> */}
           </div>
-          <div className="searched__contact">
-            {" "}
-            <h3 className="searched__contact--title">Contact Info</h3>
-            <p className="searched__contact--email">
-              E-mail: {allSearchedPark.contacts.emailAddresses[0].emailAddress}
-            </p>
-            <p className="searched__contact--phone">
-              Phone number:{" "}
-              {allSearchedPark.contacts.phoneNumbers[0].phoneNumber}
-            </p>
-            <h3 className="searched__contact--hours">Operating Hours</h3>
-            <p className="searched__contact--hours-description">
-              {allSearchedPark.operatingHours[0].description}
-            </p>
-          </div>
-          <div className="searched__description">
-            <h3 >Description</h3>
-            <p>{allSearchedPark.description}</p>
 
-            <h3>Weather Info</h3>
-            <p>{allSearchedPark.weatherInfo}</p>
-          </div>
-
-          <div>
+          {/* <div>
             <h3>Fees:</h3>
             {allSearchedPark.entranceFees.map((eachFee) => {
               return (
@@ -102,21 +144,7 @@ export default function SearchPark() {
                 </ul>
               );
             })}
-          </div>
-        </div>
-        <div className="searched__gallery">
-          {allSearchedPark.images.map((eachImage) => {
-            console.log(allSearchedPark);
-            return (
-              <div
-                className="searched__gallery--wrap"
-                // style={{ backgroundImage: `url(${eachImage.url})` }}
-              >
-                <img src={eachImage.url} width="300px" className="searched__gallery--image"/>
-                <p className="searched__gallery--caption">{eachImage.caption}</p>
-              </div>
-            );
-          })}
+          </div> */}
         </div>
       </div>
     );

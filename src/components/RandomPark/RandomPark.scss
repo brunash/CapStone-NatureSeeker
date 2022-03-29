@@ -1,7 +1,7 @@
 @use '../../styles/partials/variables'as *;
 
 .explore {
-    background-color: white;
+    background-color: $main-background;
     width: 100%;
     display: flex;
     flex-direction: column;

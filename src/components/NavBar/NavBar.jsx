@@ -14,9 +14,9 @@ export default function NavBar() {
         </Link>
         <ul className="header__nav ">
           <Link to='/explore' className="link"><li className="header__nav--option">Explore Parks</li></Link>
-          <li className="header__nav--option">Log In</li>
-          <li className="header__nav--option"></li>
-          <li className="header__nav--option"></li>
+          <li className="header__nav--option">Weather</li>
+          <li className="header__nav--option">Search Trails</li>
+          <li className="header__nav--option">Log in</li>
         </ul>
       </header>
     </>

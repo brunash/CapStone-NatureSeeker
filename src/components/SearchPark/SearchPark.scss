@@ -1,19 +1,74 @@
 @use '../../styles/partials/variables'as *;
-
+@use '../../styles/partials/mixins'as *;
 .explore {
-     background-color: $main-background;
+     background-color: white;
 }
 
-// .search {
+.searched {
     
-// }
-
-
-/*
-=====
-RESET STYLES
-=====
-*/
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 0.4rem;
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    text-align: center;
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 1rem;
+        justify-items: center;
+        margin: 1rem 1.5rem;
+        padding: 0;
+        &--wrap {
+        padding: .5rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: black 0px 20px 30px -10px;
+        background-color: white;
+        }
+        
+        &--image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+        }
+        &--caption {
+            font-size: 0.4rem;
+            margin-top: 0.1rem;
+            height: 15%;
+            font-weight: bold;
+            top: -1rem;
+            // background-color: transparentize($color: black, $amount: 0.5);
+        }
+    }
+    &__info {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // text-align: left;
+        background-color: white;
+        box-shadow: black 0px 20px 30px -10px;
+        border-radius: 10px;
+        padding: 0.5rem ;
+        font-weight: bold;
+        font-size: 0.45rem;
+        &--location {
+            margin: 0.3rem;
+        }
+        &--description {
+            margin: 0.3rem;
+        }
+        &--weather {
+            margin: 0.3rem;
+        }
+    }
+}
 .search__input {
   position: relative;
   top: -2rem;
@@ -21,28 +76,26 @@ RESET STYLES
   flex-direction: column;
   align-items: center;
   &--button {
-      background-color: $font-color;
-      color: $main-background;
-      border-radius: 15px;
-      height: 0.8rem;
-      width: 25%;
-      margin-top: 1rem;
-  }
+    background-color: $font-color;
+    color: $main-background;
+    border-radius: 15px;
+    height: 0.8rem;
+    width: 25%;
+    margin-top: 1rem;
+    }
   &--text{ 
-  background-color: transparentize($color: $main-background, $amount: 0.55);
-  border-radius: 50px;
-  border: none;
-  font-family: inherit;
-  font-size: 0.7rem;
-   text-align: center;
-  border-radius: 25px;
-  box-sizing: border-box;
-  padding: 0.3rem;
-  color: $font-color;
-//   position: relative;
-//   top: -2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
+    background-color: transparentize($color: $main-background, $amount: 0.55);
+    border-radius: 50px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.7rem;
+    text-align: center;
+    border-radius: 25px;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    color: $font-color;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    } 
 }
 .search__input--text:focus::-webkit-input-placeholder{
   color: $font-color;
@@ -59,4 +112,19 @@ RESET STYLES
 .search__input--text:focus{
   outline: white;
 }
-
+button:hover {
+    background-color: transparentize($color: $font-color, $amount: 0.1);
+    transition: 0.3s;
+}
+.searched__gallery--image:hover {
+    transform: scale(1);
+    @include tablet {
+    position:relative;
+    transition: 0.5s;
+    height:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.6);
+}
+}

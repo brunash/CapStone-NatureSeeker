@@ -37,36 +37,39 @@ console.log(parkDetails);
 
   const showParkDetails = () => {
     return (
-      <div className="search-park-images">
+      <div className="details">
         <p
-          className="back-button"
+          className="details__back"
           style={{ marginTop: "63px" }}
           onClick={() => props.history.push("/explore")}
         >
-          &#11148; Back 
+          &#11148; Back
         </p>
 
         <div
-          className="park-info"
-          style={{ width: "100%", marginBottom: "60px", marginTop: "45px" }}
+          className="details__info"
+          // style={{ width: "100%", marginBottom: "60px", marginTop: "45px" }}
         >
-          <h2 style={{ padding: "10px" }}>{parkDetails.fullName}</h2>
-          <p>
+          <h2 className="details__info--title">{parkDetails.fullName}</h2>
+          <p className="details__info--address">
             {parkDetails.addresses[0].city},{" "}
             {parkDetails.addresses[0].stateCode}
           </p>
-          <p style={{ padding: "10px" }}>{parkDetails.description}</p>
+          <p className="details__info--description">{parkDetails.description}</p>
         </div>
 
         {parkDetails?.images.map((eachImage) => {
           return (
+          <section className="image-wrap">
             <div
-              className="images"
-              style={{ backgroundImage: `url(${eachImage.url})` }}
+              className="details__image"
+              // style={{ backgroundImage: `url(${eachImage.url})` }}
             >
-              <p>{eachImage.caption}</p>
-              {/* <img src={eachImage.url} width="300px" /> */}
+              
+              <img src={eachImage.url} width="150px" className="details__image--photo" />
+              <p className="details__image--caption">{eachImage.caption}</p>
             </div>
+            </section> 
           );
         })}
       </div>
