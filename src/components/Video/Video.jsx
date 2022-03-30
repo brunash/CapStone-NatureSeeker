@@ -12,6 +12,7 @@ export default function Home() {
                 {/* <source src={Sunset} type="video/mp4" /> */}
             </video>
             <SearchPark className="main__search"/>
+            
         </div>
         </>
     )

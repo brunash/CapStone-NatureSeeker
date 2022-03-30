@@ -2,13 +2,14 @@ import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import Form from './components/Form';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
-import RandomPark from './components/RandomPark';
 import SearchPark from './components/SearchPark';
 import Video from './components/Video';
 import ExplorePage from './Pages/ExplorePage';
 import ParkDetails from './Pages/ParkDetails';
+import { useState } from 'react';
 
 function App() {
+
   return (
     <>
       {" "}

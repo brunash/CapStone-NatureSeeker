@@ -69,6 +69,12 @@
         &--weather {
             margin: 0.3rem;
         }
+        &--visit {
+          background-color: $main-background;
+          width: 5rem;
+          color: $font-color;
+          border-radius: 10px;
+        }
     }
 }
 .search__input {
@@ -130,4 +136,11 @@ button:hover {
     justify-content: center;
     transform: scale(1.6);
 }
+}
+a {
+  color: $font-color;
+}
+a:hover {
+  color: $green-color;
+  transition: 0.3s;
 }

@@ -37,6 +37,13 @@
             font-weight: bold;
             top: -1rem;
         }
+        &--visit {
+            background-color: $main-background;
+            width: 5rem;
+            color: $font-color;
+            border-radius: 10px;
+            margin-top: 0.5rem;
+        }
     }
     &__image {
         // object-fit: contain;
