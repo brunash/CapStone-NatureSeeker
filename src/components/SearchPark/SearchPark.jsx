@@ -61,7 +61,7 @@ export default function SearchPark() {
               </div>
             </div>
             <p className="searched__info--visit">
-              <a href={allSearchedPark.url}>Plan your visit</a>
+              <a href={allSearchedPark.url} className='plan'>Plan your visit</a>
             </p>
           </section>
           <div className="searched__gallery">

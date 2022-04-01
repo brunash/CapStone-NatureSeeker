@@ -3,17 +3,12 @@
 .explore {
     background-color: white;
 }
-// .search {
-//     background-color: white;
-// }
+
 .searched {
-    // background-color: white;
     display: flex;
     align-items: center;
     width: 100%;
     font-size: 0.4rem;
-    // padding-left: 1rem;
-    // padding-right: 1rem;
     text-align: center;
     &__title {
         margin-bottom: 1rem;
@@ -45,7 +40,6 @@
             height: 15%;
             font-weight: bold;
             top: -1rem;
-            // background-color: transparentize($color: black, $amount: 0.5);
         }
     }
     &__info {
@@ -87,6 +81,8 @@
   &--button {
     background-color: $font-color;
     color: $main-background;
+    font-weight: bold;
+    font-size: 0.4rem;
     border-radius: 15px;
     height: 0.8rem;
     width: 5rem;
@@ -121,10 +117,6 @@
 .search__input--text:focus{
   outline: white;
 }
-button:hover {
-    background-color: transparentize($color: $font-color, $amount: 0.1);
-    transition: 0.3s;
-}
 .searched__gallery--image:hover {
     transform: scale(1);
     @include tablet {
@@ -143,4 +135,14 @@ a {
 a:hover {
   color: $green-color;
   transition: 0.3s;
+}
+
+button:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+a.plan {
+  height: 0.8rem;
+  justify-content: center;
 }

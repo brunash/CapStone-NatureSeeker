@@ -1,0 +1,66 @@
+body {
+  height: 5rem;
+  width: 100%;
+}
+
+.navBar {
+  position: relative;
+}
+
+.navBar button {
+  position: fixed;
+  left: 40px;
+  top: 40px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.menuNav {
+  overflow-y: scroll;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  background: darkcyan;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+}
+
+.menuNav.showMenu {
+  width: 100%;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #2AC28A;
+  font-weight: bold;
+}
+
+.header {
+  border-bottom: 2px solid #D3B04D;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header__nav {
+    display: flex;
+  }
+}
+.header__nav--option {
+  font-size: 0.4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=NavBar.css.map */

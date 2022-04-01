@@ -1,0 +1,99 @@
+.details {
+  background-color: #002043;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 0.5rem;
+  height: 100%;
+}
+@media screen and (min-width: 1280px) {
+  .details {
+    height: 100vh;
+  }
+}
+.details__info {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: black 0px 20px 30px -10px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 0.45rem;
+}
+.details__info--title {
+  margin-top: 1rem;
+}
+.details__info--address {
+  margin-bottom: 1rem;
+}
+.details__info--description {
+  font-size: 0.4rem;
+  margin: 0 1rem 0.5rem 1rem;
+  height: 15%;
+  font-weight: bold;
+  top: -1rem;
+}
+.details__info--visit {
+  background-color: #002043;
+  width: 5rem;
+  color: #D3B04D;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+.details__image {
+  background-color: red;
+}
+.details__image--photo {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+.details__image--caption {
+  font-size: 0.4rem;
+  margin-top: 0.1rem;
+  height: 15%;
+  font-weight: bold;
+  top: -1rem;
+  font-size: 0.4rem;
+  margin: 0.7rem;
+  font-weight: bold;
+}
+
+.image-wrap {
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: black 0px 20px 30px -10px;
+  background-color: white;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.details__image--photo:hover {
+  transform: scale(1);
+}
+@media screen and (min-width: 768px) {
+  .details__image--photo:hover {
+    transition: 0.5s;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.6);
+  }
+}
+
+.images__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+  justify-items: center;
+  margin: 1rem 1.5rem;
+  padding: 0;
+}/*# sourceMappingURL=ParkDetails.css.map */

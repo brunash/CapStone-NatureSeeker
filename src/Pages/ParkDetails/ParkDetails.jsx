@@ -48,7 +48,7 @@ export default function ParkDetails(props) {
             {parkDetails.description}
           </p>
           <p className="details__info--visit">
-            <a href={parkDetails.url}>Plan your visit</a>
+            <a href={parkDetails.url} className='plan'>Plan your visit</a>
           </p>
         </div>
 

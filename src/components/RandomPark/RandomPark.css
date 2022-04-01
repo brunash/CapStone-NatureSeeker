@@ -1,0 +1,58 @@
+.explore {
+  background-color: #002043;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.explore__title {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.explore__park {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.random {
+  background-color: white;
+  width: 8rem;
+  height: 20%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.random__park-name {
+  font-size: 0.8rem;
+}
+.random__image {
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+.random__info {
+  font-size: 0.5rem;
+}
+
+.random__image:hover {
+  transform: scale(1);
+}
+@media screen and (min-width: 768px) {
+  .random__image:hover {
+    transition: 0.5s;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.6);
+  }
+}/*# sourceMappingURL=RandomPark.css.map */

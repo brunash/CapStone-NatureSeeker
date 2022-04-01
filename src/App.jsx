@@ -7,6 +7,7 @@ import Video from './components/Video';
 import ExplorePage from './Pages/ExplorePage';
 import ParkDetails from './Pages/ParkDetails';
 import { useState } from 'react';
+import MyExperiences from './Pages/MyExperiences';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
             render={(props) => <ParkDetails {...props} />}
           />
           <Route path="/search" exact component={SearchPark} />
+          <Route path="/experiences" exact component={MyExperiences} />
         </Switch>
       </BrowserRouter>
     </>

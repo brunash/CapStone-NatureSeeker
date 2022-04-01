@@ -1,7 +1,56 @@
+@use '../../styles/partials/variables' as *;
+
 .form {
-    background-color: red;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 10px;
+  background-color: white;
+  width: 8rem;
+  height: 9rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+//   margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  &__error {
+    font-size: 0.5rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: $green-color;
+  }
+  &__login {
+    background-color: $font-color;
+    color: $main-background;
+    border-radius: 15px;
+    height: 0.8rem;
+    width: 5rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 0.4rem;
+    color: $main-background;
+  }
+  &__input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    &--title {
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    &--label {
+      font-size: 0.6rem;
+      width: 3rem;
+    }
+    &--field {
+        width: 4rem;
+    }
+  }
 }
 
+.form__login:hover {
+  color: white;
+  transition: 0.2s;
+}

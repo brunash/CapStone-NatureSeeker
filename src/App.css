@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@500&family=Montserrat:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  background-color: #002043;
+  color: #D3B04D;
+  font-size: 3rem;
+}
+
+body {
+  font-family: "cuprum", "verdana";
+}
+
+.link {
+  color: #D3B04D;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #2AC28A;
+  transition: 0.3s;
+}/*# sourceMappingURL=App.css.map */
