@@ -1,0 +1,27 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.add-comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__input {
+        width: 8rem;
+        margin-bottom: 0.3rem;
+        font-size: 0.4rem;
+        border-radius: 15px;
+        height: 0.6rem;
+        padding: 0.1rem;
+        border: solid 1px $main-background;
+    }
+    &__button {
+        @include button;
+        margin: 0.2rem;
+    }
+}

@@ -1,0 +1,66 @@
+@use '../../styles/partials/variables'as *;
+@use '../../styles/partials/mixins'as *;
+
+.addpost {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+    width: 100%;
+    &__title-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    &__description-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    &__label {
+        font-size: 0.4rem;
+        margin-bottom: 0.1rem;
+    }
+    &__form {
+        margin-top: 1rem;
+        background-color: white;
+        width: 10rem;
+        height: 8rem;
+        border-radius: 10px;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: solid 1px $font-color;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        &--title {
+            width: 8rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.4rem;
+            border-radius: 15px;
+            height: 0.6rem;
+            padding: 0.1rem;
+             border: solid 1px $main-background;
+        }
+        &--description {
+            width: 8rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.4rem;
+            border-radius: 15px;
+            height: 2rem;
+            padding: 0.1rem;
+            resize: none;
+            border: solid 1px $main-background;
+        }
+        &--upload {
+            font-weight: bold;
+        }
+        &--button {
+            @include button;
+            margin: 0
+        }
+    }
+}
+

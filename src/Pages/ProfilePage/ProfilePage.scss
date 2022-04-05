@@ -1,0 +1,103 @@
+@use '../../styles/partials/variables'as*;
+@use '../../styles/partials/mixins'as*;
+
+.posts {
+    // padding: .5rem;
+    // border-radius: 10px;
+    // margin: 1rem 0 1rem 0;
+    // width: 6rem;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // box-shadow: black 0px 20px 30px -10px;
+    // background-color: white;
+    // border: solid 1px $font-color;
+    padding: .5rem;
+    border-radius: 10px;
+    // margin: 0 5rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: black 0px 20px 30px -10px;
+    background-color: white;
+    border: solid 1px $font-color;
+    &__image {
+        width: 5rem;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: opacity 0.5s ease-in-out;
+    }
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    &__buttons {
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        &--delete {
+            @include button;
+        }
+        &--edit {
+            @include button;
+            margin: 0;
+        }
+    }
+    &__infowrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.posts__infowrap--title {
+    margin-top: 0.2rem;
+    font-size: 0.5rem;
+    overflow-wrap: break-word;
+}
+.posts__infowrap--description {
+    margin-top: 0.1rem;
+    font-size: 0.4rem;
+    width: 5rem;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+.profile {
+  background-color: $main-background;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__posts {
+    width:  90%;
+    height: 100%;
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+  }
+  &__logged {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    //   width: 15rem;
+  }
+  &__button {
+    @include button;
+    margin: 0;
+    }
+}
+.posts__buttons--photo-edit {
+    @include button;
+}

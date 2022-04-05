@@ -14,7 +14,6 @@ export default function RandomPark() {
     },
 
     getRandomNationalParks: async () => {
-      // console.log(query);
       return await axios.get(
         `https://developer.nps.gov/api/v1/parks?limit=467&api_key=mDB2nzLwrc9Ik9377kfeJwye8n38WzhcUO5TCqzh`
       );
@@ -28,7 +27,6 @@ export default function RandomPark() {
   const getParks = (e) => {
     e.preventDefault();
     service.getNationalPark(parkName).then((response) => {
-      //console.log(response.data.data.find(each=>each.fullName.toLowerCase().includes(parkName.toLowerCase())))
       let searchedPark = response.data.data.find((each) =>
         each.fullName.toLowerCase().includes(parkName.toLowerCase())
       );
@@ -61,15 +59,13 @@ export default function RandomPark() {
             width="200px"
             className="random__image"
           />
-          {/* </div> */}
-          {/* <div className="title-div"> */}
           <Link to={`/explore/${eachPark.id}`} className='link'>
               <h3 className="random__park-name">{eachPark.fullName}</h3>
             </Link>
           <p className="random__info">
             {eachPark.fullName} - {eachPark.addresses[0].stateCode}
           </p>
-          {/* </div> */}
+          
         </div>
       );
     });

@@ -1,11 +1,8 @@
 import "./SearchPark.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 
 export default function SearchPark() {
-  // let history = useHistory();
 
   const service = {
     getNationalPark: async (query) => {
@@ -29,7 +26,6 @@ export default function SearchPark() {
   const getParks = (e) => {
     e.preventDefault();
     service.getNationalPark(parkName).then((response) => {
-      //console.log(response.data.data.find(each=>each.fullName.toLowerCase().includes(parkName.toLowerCase())))
       let searchedPark = response.data.data.find((each) =>
         each.fullName.toLowerCase().includes(parkName.toLowerCase())
       );
@@ -85,23 +81,9 @@ export default function SearchPark() {
     );
   };
 
-  // const showRandomPark = () => {
-  //   return randomParks.map((eachPark) => {
-  //     return (
-  //         <>
-  //       </>
-  //     );
-  //   });
-  // };
-
   return (
     <div>
-      <div>
-        {
-          randomParks
-          // && showRandomPark()
-        }
-      </div>
+      <div>{randomParks}</div>
       <form className="search">
         <div className="search__input">
           <input

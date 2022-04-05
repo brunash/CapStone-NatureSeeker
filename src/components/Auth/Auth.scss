@@ -1,0 +1,11 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__button {
+        width: 5rem;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+}

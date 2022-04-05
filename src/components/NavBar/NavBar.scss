@@ -24,7 +24,6 @@ body {
   list-style: none;
   position: fixed;
   top: 0;
-  background: darkcyan;
   left: 0;
   bottom: 0;
   height: 100vh;
@@ -41,12 +40,9 @@ body {
 a {
   display: flex;
   align-items: center;
-  // padding: 10px 40px;
   text-decoration: none;
   color: $green-color;
-  // text-transform: uppercase;
   font-weight: bold;
-  // transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .header {
@@ -55,11 +51,15 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     &__nav {
-        display: none;
         @include tablet {
             display: flex; 
+        }
+        &--login {
+          display: flex;
+          justify-content: space-between;
+          width: 3.5rem;
         }
        
         &--option {
