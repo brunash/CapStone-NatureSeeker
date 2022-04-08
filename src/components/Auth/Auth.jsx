@@ -21,7 +21,7 @@ function Auth(props) {
         {(!user._id && (
           <GoogleLogin
             className="login__button"
-            clientId='412510416516-cq6ahie68jhp4p2d83tpta9ut4hr58mr.apps.googleusercontent.com'
+            clientId={process.env.REACT_APP_GOOGLEID}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}

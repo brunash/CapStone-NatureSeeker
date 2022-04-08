@@ -1,19 +1,19 @@
-import './App.scss';
-import NavBar from './components/NavBar/NavBar';
-import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
-import SearchPark from './components/SearchPark';
-import Video from './components/Video';
-import ExplorePage from './Pages/ExplorePage';
-import ParkDetails from './Pages/ParkDetails';
-import { useState, useEffect } from 'react';
-import TheContext from './components/TheContext/TheContext';
-import Profile from './Pages/ProfilePage/ProfilePage';
-import actions from './components/Utils/Utils';
-import AddComments from './components/AddComments/AddComments';
-import Auth from './components/Auth';
-import PostDetails from './Pages/PostDetails/PostDetails';
-import AddPost from './Pages/AddPost/AddPost';
-import AllPosts from './Pages/AllPosts';
+import "./App.scss";
+import NavBar from "./components/NavBar/NavBar";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import SearchPark from "./components/SearchPark";
+import Video from "./components/Video";
+import ExplorePage from "./Pages/ExplorePage";
+import ParkDetails from "./Pages/ParkDetails";
+import { useState, useEffect } from "react";
+import TheContext from "./components/TheContext/TheContext";
+import Profile from "./Pages/ProfilePage/ProfilePage";
+import actions from "./components/Utils/Utils";
+import AddComments from "./components/AddComments/AddComments";
+import Auth from "./components/Auth";
+import PostDetails from "./Pages/PostDetails/PostDetails";
+import AddPost from "./Pages/AddPost/AddPost";
+import AllPosts from "./Pages/AllPosts";
 
 function App() {
   let [user, setUser] = useState({});
@@ -21,7 +21,7 @@ function App() {
   const getTheUser = async () => {
     let res = await actions.getUser();
     setUser(res.data);
-    console.log(res.data)
+    console.log(res.data);
   };
 
   useEffect(() => {

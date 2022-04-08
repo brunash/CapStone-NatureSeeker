@@ -31,8 +31,6 @@ function AddComments(props) {
       });
   };
 
-  console.log(history);
-
   return (
     <div className="add-comment">
       <form className="add-comment__form" onSubmit={handleSubmit}>

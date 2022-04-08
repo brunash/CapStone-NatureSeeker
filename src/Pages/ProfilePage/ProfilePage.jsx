@@ -21,12 +21,7 @@ export default function Profile(props) {
     let loggedUserPosts = res.data.filter(
       (eachPost) => eachPost.userId._id === postOwnerId
     );
-
     setMyPosts(loggedUserPosts);
-
-    // console.log(res.data.map(each=>each.userId._id))
-    // console.log(user._id)
-    // setMyPosts(res.data)
   }, [user._id]);
 
   const deletePost = async (id) => {

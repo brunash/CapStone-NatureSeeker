@@ -48,7 +48,6 @@ export default function Home() {
           >
             <source id="source1" src={videos[currentVideo]} type="video/mp4" />
           </video>
-
           <SearchPark className="main__search" />
         </div>
       </>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import actions from "../../components/Utils/Utils";
-import './addPost.scss'
+import "./addPost.scss";
 
 function AddPost(props) {
   let [title, setTitle] = useState("");
